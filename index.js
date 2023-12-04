@@ -1,8 +1,10 @@
 const http = require('http');
-const port = 3001;
+require('dotenv').config();
+
+const port = process.env.PORT;
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.writeHead(200, {'Content-Type': 'text/plain'});
 
     res.end('Hello, Worlddd!\n');
 });
